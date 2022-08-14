@@ -1,4 +1,7 @@
 import http from "http";
+import 'dotenv/config'
+
+const SERVER_PORT = process.env.SERVER_PORT;
 
 const jornadas = (req, res) => {
   let arrJornadas = [
@@ -79,4 +82,4 @@ function app(req, res) {
   }
 }
 
-http.createServer(app).listen(9095);
+http.createServer(app).listen(SERVER_PORT);
